@@ -1,0 +1,101 @@
+@import "../node_modules/bootstrap/less/bootstrap";
+@import "_variables";
+
+header {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  height: 200px;
+  background-color: @dark-blue;
+
+  nav {
+    position: absolute;
+    bottom: 0;
+
+    ul.nav.nav-tabs {
+
+      li {
+
+        &.active a {
+          background: #fff;
+        }
+
+        a {
+          background: @light-blue;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+main {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-top: none;
+
+  .tabs-grid {
+    padding-right: 0;
+  }
+
+  section.main-tabs, aside {
+    min-height: 600px;
+  }
+
+  section.main-tabs {
+    background: @dark-blue;
+    color: #fff;
+    padding: 20px;
+  }
+
+  aside {
+    display: table;
+    background: @light-blue;
+    color: #fff;
+    padding: 15px;
+
+    div.aside-content {
+      display: table-row;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .aside-btns {
+      display: table-cell;
+      vertical-align: bottom;
+      padding: 20px;
+
+      .aside-btn-2 {
+        float: right;
+      }
+    }
+  }
+
+  .boxes {
+    max-width: 620px;
+    margin: auto;
+    margin-top: 70px;
+
+    .box {
+      width: 100%;
+      min-width: 50px;
+      height: 100px;
+      background: #fff;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: @screen-xs){
+  main aside .aside-btns .btn {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+
+    &.aside-btn-2 {
+      float: none;
+    }
+  }
+}
